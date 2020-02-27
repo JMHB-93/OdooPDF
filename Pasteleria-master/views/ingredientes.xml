@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="Pasteleria_ingredientes_action" name="ingredientes"
+                     res_model="Pasteleria.ingredientes" />
+        <menuitem id="Pasteleria_ingredientes_menu"
+                  name="Ingredientes"
+                  action="Pasteleria_ingredientes_action"
+                  parent="menu_inicio"
+                  sequence="3" />
+
+        <record id="Pasteleria_ingredientes_view_tree" model="ir.ui.view">
+            <field name="name">Lista productos ingredientes</field>
+            <field name="model">Pasteleria.ingredientes</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="nombre" />
+                    <field name="precio" />
+		    <field name="cantidad" />
+		    <field name="perecedero" />
+		    <field name="proveedores" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="Pasteleria_ingredientes_view_form" model="ir.ui.view">
+            <field name="name">Formulario de productos ingredientes</field>
+            <field name="model">Pasteleria.ingredientes</field>
+            <field name="arch" type="xml">
+                <form>
+		    <header>
+			<button name="aniadir" type="object" string="Añadir uno" class="oe_highlight" />
+		    </header>
+                    <group>
+                        <field name="codigo" />
+                        <field name="nombre" />
+                        <field name="precio" />
+		        <field name="cantidad" />
+		    	<field name="perecedero" />
+			<field name="proveedores" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="Pasteleria_ingredientes_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de productos ingredientes</field>
+            <field name="model">Pasteleria.ingredientes</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                    <field name="nombre" />
+                    <field name="precio" />
+		    <field name="cantidad" />
+		    <field name="perecedero" />
+		    <field name="proveedores" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

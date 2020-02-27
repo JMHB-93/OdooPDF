@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="Pasteleria_embasados_action" name="embasados"
+                     res_model="Pasteleria.embasados" />
+        <menuitem id="Pasteleria_embasados_menu"
+                  name="Embasados"
+                  action="Pasteleria_embasados_action"
+                  parent="menu_inicio"
+                  sequence="2" />
+
+        <record id="Pasteleria_embasados_view_tree" model="ir.ui.view">
+            <field name="name">Lista productos embasados</field>
+            <field name="model">Pasteleria.embasados</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="nombre" />
+                    <field name="marca" />
+		    <field name="precio" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="Pasteleria_embasados_view_form" model="ir.ui.view">
+            <field name="name">Formulario de productos embasados</field>
+            <field name="model">Pasteleria.embasados</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="codigo" />
+                        <field name="nombre" />
+                        <field name="marca" />
+		        <field name="precio" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="Pasteleria_embasados_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de productos embasados</field>
+            <field name="model">Pasteleria.embasados</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                    <field name="nombre" />
+                    <field name="marca" />
+		    <field name="precio" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

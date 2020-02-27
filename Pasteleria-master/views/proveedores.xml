@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="Pasteleria_proveedores_action" name="proveedores"
+                     res_model="Pasteleria.proveedores" />
+        <menuitem id="Pasteleria_proveedores_menu"
+                  name="Proveedores"
+                  action="Pasteleria_proveedores_action"
+                  parent="menu_inicio"
+                  sequence="4" />
+
+        <record id="Pasteleria_proveedores_view_tree" model="ir.ui.view">
+            <field name="name">Lista productos proveedores</field>
+            <field name="model">Pasteleria.proveedores</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="nombre" />
+                    <field name="nombreRep" />
+		    <field name="telefono" />
+		    <field name="diasVisita" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="Pasteleria_proveedores_view_form" model="ir.ui.view">
+            <field name="name">Formulario de productos proveedores</field>
+            <field name="model">Pasteleria.proveedores</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="codigo" />
+                    	<field name="nombre" />
+                    	<field name="nombreRep" />
+		    	<field name="telefono" />
+		    	<field name="diasVisita" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="Pasteleria_proveedores_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de productos proveedores</field>
+            <field name="model">Pasteleria.proveedores</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="codigo" />
+                    <field name="nombre" />
+                    <field name="nombreRep" />
+		    <field name="telefono" />
+		    <field name="diasVisita" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>
